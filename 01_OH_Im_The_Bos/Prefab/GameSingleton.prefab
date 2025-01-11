@@ -45,3 +45,58 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_GameName: OH! I'M THE BOSS!!
+  m_PlayedLevel:
+    m_CurrentStarDone: 0
+    m_Unlocked: 0
+    m_Definition: {fileID: 0}
+  m_CurrentKepuasan: 0
+  m_CurrentDuration: 0
+  m_Ready: 0
+  m_LevelOver: 0
+  m_UnlockedLevel: 1
+  m_Levels:
+  - m_CurrentStarDone: 3
+    m_Unlocked: 1
+    m_Definition: {fileID: 11400000, guid: 215bd6f542a802344be75a83a60c2f14, type: 2}
+  - m_CurrentStarDone: 2
+    m_Unlocked: 1
+    m_Definition: {fileID: 11400000, guid: 09f18d81ea2c7a04793079c99e011619, type: 2}
+  - m_CurrentStarDone: 1
+    m_Unlocked: 1
+    m_Definition: {fileID: 11400000, guid: 8de7074a0ae6fa84491959ed09db4061, type: 2}
+  m_OnRefresh:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Rush.LevelPanel, Assembly-CSharp
+        m_MethodName: Init
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 0
+  m_OnLevelPlay:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnStarChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnKepuasanChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnCurrentDurationChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLevelOverWin:
+    m_PersistentCalls:
+      m_Calls: []
+  OnLevelOverLose:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnReadyChanged:
+    m_PersistentCalls:
+      m_Calls: []

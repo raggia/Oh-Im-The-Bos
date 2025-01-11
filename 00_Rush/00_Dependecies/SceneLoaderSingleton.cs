@@ -14,6 +14,11 @@ namespace Rush
             CoroutineUtility.BeginCoroutine($"{GetInstanceID()}/{nameof(LoadingScene)}", LoadingScene(sceneName));
         }
 
+        public Coroutine LoadSceneAsync(string sceneName)
+        {
+            return CoroutineUtility.BeginCoroutineReturn($"{GetInstanceID()}/{nameof(LoadingScene)}", LoadingScene(sceneName));
+        }
+
         private IEnumerator LoadingScene(string sceneName)
         {
             m_CanvasView.Show();

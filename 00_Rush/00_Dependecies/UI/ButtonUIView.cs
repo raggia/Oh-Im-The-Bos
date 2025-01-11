@@ -40,7 +40,11 @@ namespace Rush
 
         public void SetInteractableButton(bool interactable)
         {
-            m_Button.interactable = interactable;
+            SetInteractButtonInternal(interactable);
+        }
+        protected void SetInteractButtonInternal(bool set)
+        {
+            m_Button.interactable = set;
         }
         public void SetFrame(Sprite frame)
         {
