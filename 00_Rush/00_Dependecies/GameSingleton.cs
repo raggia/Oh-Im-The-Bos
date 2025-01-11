@@ -8,6 +8,11 @@ namespace Rush
         private string m_GameName;
 
         public string GameName => m_GameName;
+
+        public void QuitGame()
+        {
+            Application.Quit();
+        }
     }
 }
 

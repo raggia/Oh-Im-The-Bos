@@ -17,7 +17,6 @@ namespace Rush
 
         protected override void Start()
         {
-            base.Start();
             ShowInternal();
         }
         protected override void ShowInternal(float overideDelay = 0)
