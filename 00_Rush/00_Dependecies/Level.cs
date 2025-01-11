@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -13,6 +14,11 @@ namespace Rush
         private bool m_Unlocked = false;
         [SerializeField]
         private LevelDefinition m_Definition;
+
+        [SerializeField]
+        private List<StaffDefinition> m_StaffDefinitions = new();
+
+        public List<StaffDefinition> StaffDefinitions => m_StaffDefinitions;
         public int CurrentStarDone => m_CurrentStarDone;
         public LevelDefinition Definition => m_Definition;
         public bool Unlocked => m_Unlocked;

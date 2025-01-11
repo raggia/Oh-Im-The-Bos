@@ -2,12 +2,16 @@ using UnityEngine;
 
 namespace Rush
 {
-    public class StaffDefinition : MonoBehaviour
+    [CreateAssetMenu(fileName = "New Level", menuName = "Boss/Staff")]
+    public class StaffDefinition : ScriptableObject
     {
         [SerializeField]
         private Sprite m_IdleStateSprite;
         [SerializeField]
         private Sprite m_ActionStateSprite;
+
+        [SerializeField]
+        private float m_KepuasanPoint;
 
         [Header("Delay Idle to Action")]
         [SerializeField]
@@ -21,6 +25,7 @@ namespace Rush
         {
             return Random.Range(m_MinActionDelayEnter, m_MaxActionDelayEnter);
         }
+        public float KepuasanPoint => m_KepuasanPoint;
     }
 }
 

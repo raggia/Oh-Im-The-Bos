@@ -161,11 +161,11 @@ namespace Rush
             m_UnlockedLevel += add;
             RefreshInternal();
         }
-        public void AddCurrentKepuasan(int add)
+        public void AddCurrentKepuasan(float add)
         {
             AddCurrentKepuasanInternal(add);
         }
-        public void SetCurrentKepuasan(int set)
+        public void SetCurrentKepuasan(float set)
         {
             SetCurrentKepuasanInternal(set);
         }
@@ -232,7 +232,12 @@ namespace Rush
         }
 
         public Level PlayedLevel => m_PlayedLevel;
-
+        public bool Ready => m_Ready;
+        public bool LevelOver => m_LevelOver;
+        public List<StaffDefinition> GetStaffDefinitions()
+        {
+            return GetLevel(m_PlayedLevel.Definition).StaffDefinitions;
+        }
         public void Pause()
         {
             Time.timeScale = 0f;
