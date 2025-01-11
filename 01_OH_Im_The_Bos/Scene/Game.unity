@@ -1415,6 +1415,7 @@ GameObject:
   - component: {fileID: 184103599}
   - component: {fileID: 184103598}
   - component: {fileID: 184103597}
+  - component: {fileID: 184103600}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -1498,6 +1499,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 184103600}
+        m_TargetAssemblyTypeName: Rush.PauseAgent, Assembly-CSharp
+        m_MethodName: UnPause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &184103598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1536,6 +1549,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 184103595}
   m_CullTransparentMesh: 1
+--- !u!114 &184103600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184103595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e37ca121be202f4e807442b5d5d5b23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &205167492
 GameObject:
   m_ObjectHideFlags: 0
@@ -3512,6 +3537,7 @@ MonoBehaviour:
   m_IsBusyPanel: 0
   m_LevelNameText: {fileID: 1772069284}
   m_TimeCountText: {fileID: 435927755}
+  m_KepuasanSlider: {fileID: 176002498}
   m_Minutes: 0
   m_Seconds: 0
 --- !u!114 &609540955
@@ -3547,6 +3573,64 @@ MonoBehaviour:
             - m_Target: {fileID: 609540954}
               m_TargetAssemblyTypeName: Rush.GameplayPanel, Assembly-CSharp
               m_MethodName: SetTimeCounText
+              m_Mode: 0
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+      EventFieldVector2:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldIntBool:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldStringVector2:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldObject:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldObjectDouble:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldObjectTripple:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+    - EventValue: 2
+      EventField:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldBool:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldFloat:
+        RegisterTarget: {fileID: 11400000, guid: 95f520692f73b564cb718c13603eebde, type: 2}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 609540954}
+              m_TargetAssemblyTypeName: Rush.GameplayPanel, Assembly-CSharp
+              m_MethodName: SetKepuasanSlider
               m_Mode: 0
               m_Arguments:
                 m_ObjectArgument: {fileID: 0}
@@ -7395,6 +7479,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: a5b7d2d7669d30148a7ee19517ff1b2a, type: 2}
+        m_TargetAssemblyTypeName: Rush.EventTicketDefinition, Assembly-CSharp
+        m_MethodName: Execute
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1513796678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8661,6 +8757,7 @@ GameObject:
   - component: {fileID: 1795660022}
   - component: {fileID: 1795660021}
   - component: {fileID: 1795660020}
+  - component: {fileID: 1795660023}
   m_Layer: 0
   m_Name: Pause
   m_TagString: Untagged
@@ -8745,6 +8842,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1795660023}
+        m_TargetAssemblyTypeName: Rush.PauseAgent, Assembly-CSharp
+        m_MethodName: Pause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1795660021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8783,6 +8892,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1795660018}
   m_CullTransparentMesh: 1
+--- !u!114 &1795660023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795660018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e37ca121be202f4e807442b5d5d5b23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1859134476
 GameObject:
   m_ObjectHideFlags: 0

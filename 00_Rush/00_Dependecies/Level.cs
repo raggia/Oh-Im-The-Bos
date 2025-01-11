@@ -32,7 +32,7 @@ namespace Rush
         {
             m_Unlocked = set;
         }
-        public int GetKepuasan()
+        public float GetKepuasan()
         {
             return m_Definition.Kepuasan;
         }

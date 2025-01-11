@@ -8,11 +8,11 @@ namespace Rush
         [SerializeField]
         private string m_SceneName;
         [SerializeField]
-        private int m_Kepuasan;
+        private float m_Kepuasan;
         [SerializeField]
         private float m_Duration;
 
-        public int Kepuasan => m_Kepuasan;
+        public float Kepuasan => m_Kepuasan;
         public float Duration => m_Duration;
 
         public Coroutine LoadLevel()

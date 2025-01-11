@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,6 +18,13 @@ namespace Rush
 
         protected override void Start()
         {
+            base.Start();
+            StartCoroutine(StartPanel());
+        }
+
+        private IEnumerator StartPanel()
+        {
+            yield return new WaitUntil(() => CoroutineSingleton.HasInstance);
             ShowInternal();
         }
         protected override void ShowInternal(float overideDelay = 0)

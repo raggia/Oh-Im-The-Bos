@@ -24,13 +24,14 @@ namespace Rush
         protected override void Start()
         {
             base.Start();
+            ShowInternal();
             if (GameSingleton.Instance.PlayedLevel.Definition == m_FirstLevel)
             {
-                ShowInternal();
+                //ShowInternal();
             }
             else
             {
-                HideInternal();
+                //HideInternal();
             }
         }
     }

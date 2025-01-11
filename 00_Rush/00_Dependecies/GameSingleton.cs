@@ -13,7 +13,7 @@ namespace Rush
         private Level m_PlayedLevel;
 
         [SerializeField, ReadOnly]
-        private int m_CurrentKepuasan;
+        private float m_CurrentKepuasan;
         [SerializeField, ReadOnly]
         private float m_CurrentDuration;
         [SerializeField, ReadOnly]
@@ -32,7 +32,11 @@ namespace Rush
         [SerializeField]
         private UnityEvent<Level> m_OnStarChanged = new();
         [SerializeField]
-        private UnityEvent<int> m_OnKepuasanChanged = new();
+        private UnityEvent<float> m_OnMaxKepuasanChanged = new();
+        [SerializeField]
+        private UnityEvent<float> m_OnKepuasanChanged = new();
+        [SerializeField]
+        private UnityEvent<float> m_OnKepuasanRateChanged = new();
         [SerializeField]
         private UnityEvent<float> m_OnCurrentDurationChanged = new();
         [SerializeField]
@@ -70,26 +74,51 @@ namespace Rush
         {
             m_PlayedLevel = GetLevel(defi);
 
+            RestartLevelInternal();
             yield return m_PlayedLevel.LoadLevel();
             m_OnLevelPlay?.Invoke(m_PlayedLevel);
-            m_CurrentKepuasan = 0;
+        }
+        public void RestartLevel()
+        {
+            RestartLevelInternal();
+        }
+
+        private void RestartLevelInternal()
+        {
+            m_Ready = false;
+            m_LevelOver = false;
+            SetCurrentKepuasanInternal(0);
+            m_OnMaxKepuasanChanged?.Invoke(GetKepuasan(m_PlayedLevel.Definition));
             m_CurrentDuration = GetDuration(m_PlayedLevel.Definition);
         }
-        private void SetCurrentKepuasanInternal(int set)
+        private void SetCurrentKepuasanInternal(float set)
         {
             m_CurrentKepuasan = set;
             
             m_CurrentKepuasan = Mathf.Clamp(m_CurrentKepuasan, 0, GetKepuasan(m_PlayedLevel.Definition));
+            float rate = GetKepuasanRateInternal();
             m_OnKepuasanChanged?.Invoke(m_CurrentKepuasan);
+            m_OnKepuasanRateChanged?.Invoke(rate);
             DetermineWin();
         }
-        private void AddCurrentKepuasanInternal(int add)
+        public float GetKepuasanRate()
+        {
+            return GetKepuasanRateInternal();
+        }
+        private float GetKepuasanRateInternal()
+        {
+            float a = m_CurrentKepuasan;
+            float b = GetKepuasan(m_PlayedLevel.Definition);
+            float rate = a / b;
+            return rate;
+        }
+        private void AddCurrentKepuasanInternal(float add)
         {
             m_CurrentKepuasan += add;
             m_CurrentKepuasan = Mathf.Clamp(m_CurrentKepuasan, 0, GetKepuasan(m_PlayedLevel.Definition));
             DetermineWin();
         }
-        private int GetKepuasan(LevelDefinition defi)
+        private float GetKepuasan(LevelDefinition defi)
         {
             return GetLevel(defi).GetKepuasan();
         }
@@ -142,7 +171,7 @@ namespace Rush
         }
         private void RefreshInternal()
         {
-            for (int i = 0; i < m_UnlockedLevel - 1; i++)
+            for (int i = 0; i < m_UnlockedLevel; i++)
             {
                 m_Levels[i].SetUnlocked(true);
             }
@@ -203,6 +232,15 @@ namespace Rush
         }
 
         public Level PlayedLevel => m_PlayedLevel;
+
+        public void Pause()
+        {
+            Time.timeScale = 0f;
+        }
+        public void UnPause()
+        {
+            Time.timeScale = 1f;
+        }
     }
 }
 
