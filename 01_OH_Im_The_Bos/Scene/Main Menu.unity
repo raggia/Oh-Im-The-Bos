@@ -3646,6 +3646,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1408112631}
+  - component: {fileID: 1408112632}
   m_Layer: 5
   m_Name: Background Panel
   m_TagString: Untagged
@@ -3673,6 +3674,37 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1408112632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408112630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bdbda20ddd183a4badac4c29bee62b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ViewField:
+    m_Content: {fileID: 273756847}
+    m_ShowDelay: 0
+    m_HideDelay: 0
+    m_OnShowStart:
+      m_PersistentCalls:
+        m_Calls: []
+    m_OnHideStart:
+      m_PersistentCalls:
+        m_Calls: []
+    m_OnShowDone:
+      m_PersistentCalls:
+        m_Calls: []
+    m_OnHideDone:
+      m_PersistentCalls:
+        m_Calls: []
+    m_IsShowing: 0
+  m_Id: 
+  m_IsBusyPanel: 0
 --- !u!1 &1487339364
 GameObject:
   m_ObjectHideFlags: 0
@@ -4674,6 +4706,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
       propertyPath: m_Levels.Array.data[0].m_StaffDefinitions.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
+      propertyPath: m_OnLevelOverWin.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
@@ -4697,6 +4733,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
+      propertyPath: m_OnLevelOverWin.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
       propertyPath: OnLevelOverLose.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 11400000, guid: 2076c381210b3164a913fab06a135a00, type: 2}
@@ -4704,6 +4744,10 @@ PrefabInstance:
       propertyPath: m_OnLevelOverLose.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
+      propertyPath: m_OnLevelOverWin.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: df95c2b950b7465469fe576233d297a4, type: 2}
     - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
       propertyPath: m_OnLevelOverLose.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -4717,8 +4761,16 @@ PrefabInstance:
       value: Execute
       objectReference: {fileID: 0}
     - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
+      propertyPath: m_OnLevelOverWin.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
       propertyPath: m_OnLevelOverLose.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
+      propertyPath: m_OnLevelOverWin.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Execute
       objectReference: {fileID: 0}
     - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
       propertyPath: m_OnKepuasanRateChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -4761,6 +4813,10 @@ PrefabInstance:
       value: Rush.EventTicketDefinition, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
+      propertyPath: m_OnLevelOverWin.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Rush.EventTicketDefinition, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
       propertyPath: m_OnLevelOverLose.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Rush.EventTicketDefinition, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -4774,6 +4830,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
       propertyPath: OnLevelOverLose.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
+      propertyPath: m_OnLevelOverWin.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5368f6a946090d4681dba7b6c156238, type: 3}
   m_Name: Staff Easy
   m_EditorClassIdentifier: 
-  m_IdleStateSprite: {fileID: 0}
-  m_ActionStateSprite: {fileID: 0}
-  m_KepuasanPoint: 0
-  m_MinActionDelayEnter: 0
-  m_MaxActionDelayEnter: 0
+  m_IdleStateSprite: {fileID: 6334906940555537008, guid: f5f5cdb60d669684782054ab8c464748, type: 3}
+  m_ActionStateSprite: {fileID: -5107462362047896999, guid: d75d521c8e9cba64791e8361f4828de0, type: 3}
+  m_KepuasanPoint: 50
+  m_MinActionDelayEnter: 3
+  m_MaxActionDelayEnter: 5

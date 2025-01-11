@@ -116,6 +116,9 @@ namespace Rush
         {
             m_CurrentKepuasan += add;
             m_CurrentKepuasan = Mathf.Clamp(m_CurrentKepuasan, 0, GetKepuasan(m_PlayedLevel.Definition));
+            float rate = GetKepuasanRateInternal();
+            m_OnKepuasanChanged?.Invoke(m_CurrentKepuasan);
+            m_OnKepuasanRateChanged?.Invoke(rate);
             DetermineWin();
         }
         private float GetKepuasan(LevelDefinition defi)

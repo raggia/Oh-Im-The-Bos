@@ -9,11 +9,11 @@ namespace Rush
         Idle = 0,
         Action = 1,
     }
-    public class Staff : ButtonUIView
+    public class StaffView : ButtonUIView
     {
         [SerializeField]
         private StaffState m_State = StaffState.Idle;
-        [SerializeField, ReadOnly]
+        [SerializeField]
         private StaffDefinition m_Defi;
         [SerializeField]
         private Image m_CharImage;
@@ -22,9 +22,14 @@ namespace Rush
         [SerializeField, ReadOnly]
         private float m_MaxActionDelayEnter;
         [SerializeField]
-        private UnityEvent<Staff> m_OnIdleStateEnter = new();
+        private UnityEvent<StaffView> m_OnIdleStateEnter = new();
         [SerializeField]
-        private UnityEvent<Staff> m_OnActionStateEnter = new();
+        private UnityEvent<StaffView> m_OnActionStateEnter = new();
+        protected override void Start()
+        {
+            base.Start();
+            Init(m_Defi);
+        }
         private void Update()
         {
             HandleActionDelay();
@@ -49,7 +54,6 @@ namespace Rush
             m_Defi = defi;
             SwitchState(StaffState.Idle);
             SetMaxActionDelay(m_Defi.GetActionDelayEnter());
-            
         }
         private void SetMaxActionDelay(float set)
         {
@@ -87,6 +91,7 @@ namespace Rush
         public void ApplyKepuasan()
         {
             GameSingleton.Instance.AddCurrentKepuasan(m_Defi.KepuasanPoint);
+            SwitchState(StaffState.Idle);
         }
         
     }
