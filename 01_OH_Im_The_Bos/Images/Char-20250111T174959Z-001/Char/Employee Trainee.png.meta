@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: cee9bea23c41b91488f78074bd230882
+guid: 64f6b148670d85b4ea94246df0cf525b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5107462362047896999
-    second: EmpLead_0
-  - first:
-      213: -6927850700106239136
-    second: EmpLead_1
+      213: -8282076336887149559
+    second: Employee Trainee_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -129,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EmpLead_0
+      name: Employee Trainee_0
       rect:
         serializedVersion: 2
-        x: 122
-        y: 75
-        width: 259
-        height: 402
+        x: 0
+        y: 5
+        width: 352
+        height: 551
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,30 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 952257eca06ae19b0800000000000000
-      internalID: -5107462362047896999
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EmpLead_1
-      rect:
-        serializedVersion: 2
-        x: 634
-        y: 75
-        width: 259
-        height: 390
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 063f93b5e745bdf90800000000000000
-      internalID: -6927850700106239136
+      spriteID: 90c4c21b377201d80800000000000000
+      internalID: -8282076336887149559
       vertices: []
       indices: 
       edges: []

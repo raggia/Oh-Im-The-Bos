@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: b2e4273215716b1488a58108f4014436
+guid: fa12fa139f3c81a4d858927984301b2d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6334906940555537008
-    second: EmpContract_0
-  - first:
-      213: 7938958312289507224
-    second: EmpContract_1
+      213: 2888427252096979072
+    second: mockup_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -129,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EmpContract_0
+      name: mockup_0
       rect:
         serializedVersion: 2
-        x: 122
-        y: 75
-        width: 259
-        height: 412
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,30 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 07a28f47c4c1ae750800000000000000
-      internalID: 6334906940555537008
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EmpContract_1
-      rect:
-        serializedVersion: 2
-        x: 634
-        y: 75
-        width: 259
-        height: 400
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 89796aac588dc2e60800000000000000
-      internalID: 7938958312289507224
+      spriteID: 0805cc04841c51820800000000000000
+      internalID: 2888427252096979072
       vertices: []
       indices: 
       edges: []

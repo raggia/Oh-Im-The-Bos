@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: e272421ad07353f4bb62310c53847e0a
+guid: a2966f2e2cb5df4439db83d84c9faa27
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3194915188029009811
-    second: EmpTrainee_0
-  - first:
-      213: 9110339430508724969
-    second: EmpTrainee_1
+      213: 2002119249899517751
+    second: quit default_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -129,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EmpTrainee_0
+      name: quit default_0
       rect:
         serializedVersion: 2
-        x: 121
-        y: 75
-        width: 261
-        height: 407
+        x: 4
+        y: 4
+        width: 344
+        height: 156
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,30 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 39f28f5af6e965c20800000000000000
-      internalID: 3194915188029009811
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EmpTrainee_1
-      rect:
-        serializedVersion: 2
-        x: 633
-        y: 75
-        width: 261
-        height: 395
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9e205b2817d6e6e70800000000000000
-      internalID: 9110339430508724969
+      spriteID: 7377b30a9d4f8cb10800000000000000
+      internalID: 2002119249899517751
       vertices: []
       indices: 
       edges: []
