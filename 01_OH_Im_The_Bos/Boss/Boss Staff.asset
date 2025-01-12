@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09743eb05f9aa234ab77d4865f800771, type: 3}
+  m_Name: Boss Staff
+  m_EditorClassIdentifier: 
+  m_ActionSprites:
+  - {fileID: 2111846974255508045, guid: 0845e8049e5842145983d8c93518d3be, type: 3}
+  - {fileID: -5408471856717061293, guid: 0845e8049e5842145983d8c93518d3be, type: 3}
+  - {fileID: 5176558460980810087, guid: c02da9d88c6f9e243a1fa69395b8e185, type: 3}
+  - {fileID: 868191918480159907, guid: c02da9d88c6f9e243a1fa69395b8e185, type: 3}
+  - {fileID: -4943123914120945462, guid: c02da9d88c6f9e243a1fa69395b8e185, type: 3}
+  m_IdleSprites:
+  - Sprite: {fileID: 1954648774741364047, guid: ee06da1a8207e874aade0fc803427f39, type: 3}
+    Voice: {fileID: 8300000, guid: 498ea11478ae75d40a368a3f20d7c8e6, type: 3}
+  - Sprite: {fileID: 6852852300743010206, guid: acfa0558d45165341b790dd174dd5931, type: 3}
+    Voice: {fileID: 8300000, guid: 7e056c91764102844b6a733e18245c97, type: 3}
+  - Sprite: {fileID: 3761988436312462681, guid: 41e30c428b435674abaa88b2a5d2eef1, type: 3}
+    Voice: {fileID: 8300000, guid: 8a2530e1a6e609845b90acbb08347ba6, type: 3}
+  - Sprite: {fileID: 6005255459396814700, guid: 0845e8049e5842145983d8c93518d3be, type: 3}
+    Voice: {fileID: 8300000, guid: 40c236426a6771d428d65989ce7d0423, type: 3}
+  - Sprite: {fileID: 5176558460980810087, guid: c02da9d88c6f9e243a1fa69395b8e185, type: 3}
+    Voice: {fileID: 8300000, guid: e30df58386e778e48a22b23701618ba9, type: 3}
+  - Sprite: {fileID: 868191918480159907, guid: c02da9d88c6f9e243a1fa69395b8e185, type: 3}
+    Voice: {fileID: 8300000, guid: 40c236426a6771d428d65989ce7d0423, type: 3}

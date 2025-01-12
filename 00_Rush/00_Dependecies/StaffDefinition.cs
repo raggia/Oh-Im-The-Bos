@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Rush
@@ -8,7 +9,7 @@ namespace Rush
         [SerializeField]
         private Sprite m_IdleStateSprite;
         [SerializeField]
-        private Sprite m_ActionStateSprite;
+        private List<Sprite> m_ActionStateSprites;
 
         [SerializeField]
         private float m_KepuasanPoint;
@@ -19,7 +20,11 @@ namespace Rush
         [SerializeField]
         private float m_MaxActionDelayEnter;
         public Sprite IdleStateSprite => m_IdleStateSprite;
-        public Sprite ActionStateSprite => m_ActionStateSprite;
+        public Sprite GetActionStateSprite()
+        {
+            int r = Random.Range(0, m_ActionStateSprites.Count);
+            return m_ActionStateSprites[r];
+        }
 
         public float GetActionDelayEnter()
         {

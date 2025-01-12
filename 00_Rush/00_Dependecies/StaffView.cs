@@ -16,7 +16,7 @@ namespace Rush
         [SerializeField]
         private StaffDefinition m_Defi;
         [SerializeField]
-        private Image m_CharImage;
+        private Image m_EmojiImage;
         [SerializeField, ReadOnly]
         private float m_ActionDelayEnter;
         [SerializeField, ReadOnly]
@@ -77,7 +77,8 @@ namespace Rush
 
         private void OnSwitchIdle()
         {
-            m_CharImage.sprite = m_Defi.IdleStateSprite;
+            m_EmojiImage.gameObject.SetActive(false);
+            m_EmojiImage.sprite = m_Defi.IdleStateSprite;
             SetMaxActionDelay(m_Defi.GetActionDelayEnter());
             m_ActionDelayEnter = m_MaxActionDelayEnter;
             SetInteractButtonInternal(false);
@@ -85,8 +86,10 @@ namespace Rush
         }
         private void OnSwitchAction()
         {
-            m_CharImage.sprite = m_Defi.ActionStateSprite;
+            m_EmojiImage.gameObject.SetActive(true);
+            m_EmojiImage.sprite = m_Defi.GetActionStateSprite();
             SetInteractButtonInternal(true);
+            GameSingleton.Instance.AddActionCount(1);
             m_OnActionStateEnter?.Invoke(this);
         }
 

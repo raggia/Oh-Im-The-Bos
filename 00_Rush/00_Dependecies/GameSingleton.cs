@@ -14,6 +14,8 @@ namespace Rush
         private Level m_PlayedLevel;
 
         [SerializeField, ReadOnly]
+        private int m_StaffActionCount;
+        [SerializeField, ReadOnly]
         private float m_CurrentKepuasan;
         [SerializeField, ReadOnly]
         private float m_CurrentDuration;
@@ -46,6 +48,8 @@ namespace Rush
         private UnityEvent<Level> m_OnLevelOverLose = new();
         [SerializeField]
         private UnityEvent<Level> m_OnReadyChanged = new();
+        [SerializeField]
+        private UnityEvent<int> m_OnActionCountChanged = new();
         public string GameName => m_GameName;
 
         public List<Level> Levels => m_Levels;
@@ -57,7 +61,12 @@ namespace Rush
                 level.Init();
             }
         }
-
+        public void AddActionCount(int add)
+        {
+            m_StaffActionCount = add;
+            m_StaffActionCount = Mathf.Clamp(m_StaffActionCount, 0, int.MaxValue);
+            m_OnActionCountChanged?.Invoke(m_StaffActionCount);
+        }
         private void Update()
         {
             HandlePlayingDuration();

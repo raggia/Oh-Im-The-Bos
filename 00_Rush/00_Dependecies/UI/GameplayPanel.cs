@@ -9,6 +9,9 @@ namespace Rush
     public partial class GameplayPanel : PanelView
     {
         [SerializeField]
+        private Boss m_Boss;
+
+        [SerializeField]
         private TextMeshProUGUI m_LevelNameText;
         [SerializeField]
         private TextMeshProUGUI m_TimeCountText;
@@ -25,6 +28,15 @@ namespace Rush
             base.Start();
             m_LevelNameText.text = GameSingleton.Instance.GetPlayedLevelName();
             m_KepuasanSlider.value = GameSingleton.Instance.GetKepuasanRate();
+        }
+
+        public void Action()
+        {
+            m_Boss.Action();
+        }
+        public void HandleActionCount(int count)
+        {
+            m_Boss.HandleActionCount(count);
         }
         public void SetTimeCounText(float time)
         {
