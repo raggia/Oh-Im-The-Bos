@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IdleStateSprite: {fileID: 6334906940555537008, guid: f5f5cdb60d669684782054ab8c464748, type: 3}
   m_ActionStateSprites:
-  - {fileID: 21300000, guid: 97b49874aed4b43788d90720bf2b2023, type: 3}
-  - {fileID: 21300000, guid: 393781675fedf45caa73b42273c43781, type: 3}
-  - {fileID: 21300000, guid: 11a782900db47492298e7812b2357e3a, type: 3}
-  - {fileID: 21300000, guid: 9d911362ef12d4c8a935c7b8e05d7037, type: 3}
+  - {fileID: 680793629237541433, guid: 1ef0af9660f6ff144b34dc14796499dd, type: 3}
+  - {fileID: -5712959122012955994, guid: 15607f903e04e1a4f9ba9e6228779b36, type: 3}
+  - {fileID: -3721964342038922422, guid: 7415d5a3a2aeab14b8edd111bfa91a63, type: 3}
+  - {fileID: 6812882129117608752, guid: 5f508882bbaedab42bd52401f992dcc0, type: 3}
+  - {fileID: 8590157901805324012, guid: 5f508882bbaedab42bd52401f992dcc0, type: 3}
   m_KepuasanPoint: 20
   m_MinActionDelayEnter: 2
   m_MaxActionDelayEnter: 7
