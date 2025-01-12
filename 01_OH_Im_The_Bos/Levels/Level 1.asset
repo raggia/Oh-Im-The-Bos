@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Level 1
   m_EditorClassIdentifier: 
   m_SceneName: Game
-  m_Kepuasan: 100
-  m_Duration: 20
+  m_Kepuasan: 300
+  m_Duration: 180

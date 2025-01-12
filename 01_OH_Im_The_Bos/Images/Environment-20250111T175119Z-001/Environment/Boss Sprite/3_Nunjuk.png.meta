@@ -235,7 +235,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      3_Nunjuk_0: 2111846974255508045
+      3_Nunjuk_1: 6005255459396814700
+      3_Nunjuk_2: -5408471856717061293
+      3_Nunjuk_3: -6330362531368544659
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
