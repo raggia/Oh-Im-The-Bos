@@ -186,6 +186,7 @@ namespace Rush
         }
         private void RefreshInternal()
         {
+            if (m_UnlockedLevel > m_Levels.Count) return;
             for (int i = 0; i < m_UnlockedLevel; i++)
             {
                 m_Levels[i].SetUnlocked(true);
@@ -238,13 +239,17 @@ namespace Rush
         public void PlayLevel()
         {
             int index = m_UnlockedLevel - 1;
-            if (m_UnlockedLevel >= 4)
+            if (m_UnlockedLevel > m_Levels.Count)
             {
                 SceneLoaderSingleton.Instance.LoadScene("Main Menu");
-                return;
+                //return;
             }
-            LevelDefinition defi = m_Levels[index].Definition;
-            CoroutineSingleton.Instance.BeginCoroutine($"{GetInstanceID()}/{nameof(PlayingLevel)}", PlayingLevel(defi));
+            else
+            {
+                LevelDefinition defi = m_Levels[index].Definition;
+                CoroutineSingleton.Instance.BeginCoroutine($"{GetInstanceID()}/{nameof(PlayingLevel)}", PlayingLevel(defi));
+            }
+            
         }
 
         public void SetReady(bool set)
