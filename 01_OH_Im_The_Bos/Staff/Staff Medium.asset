@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5368f6a946090d4681dba7b6c156238, type: 3}
   m_Name: Staff Medium
   m_EditorClassIdentifier: 
-  m_IdleStateSprite: {fileID: 6334906940555537008, guid: f5f5cdb60d669684782054ab8c464748, type: 3}
+  m_IdleStateSprite: {fileID: 9110339430508724969, guid: 8c3d2dc0c4d89c740b30bcd74f74ffc6, type: 3}
   m_ActionStateSprites:
   - {fileID: 680793629237541433, guid: 1ef0af9660f6ff144b34dc14796499dd, type: 3}
   - {fileID: -5712959122012955994, guid: 15607f903e04e1a4f9ba9e6228779b36, type: 3}

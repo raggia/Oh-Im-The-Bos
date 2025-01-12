@@ -16,6 +16,8 @@ namespace Rush
         [SerializeField]
         private StaffDefinition m_Defi;
         [SerializeField]
+        private Image m_StaffModel;
+        [SerializeField]
         private Image m_EmojiImage;
         [SerializeField, ReadOnly]
         private float m_ActionDelayEnter;
@@ -54,6 +56,7 @@ namespace Rush
         public void Init(StaffDefinition defi)
         {
             m_Defi = defi;
+            m_StaffModel.sprite = m_Defi.IdleStateSprite;
             SwitchState(StaffState.Idle);
             SetMaxActionDelay(m_Defi.GetActionDelayEnter());
         }
