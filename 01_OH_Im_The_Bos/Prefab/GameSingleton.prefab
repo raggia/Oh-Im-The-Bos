@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5104781774173166390}
   - component: {fileID: 5566552760645299931}
+  - component: {fileID: 275538197474568800}
   m_Layer: 0
   m_Name: GameSingleton
   m_TagString: Untagged
@@ -49,27 +50,64 @@ MonoBehaviour:
     m_CurrentStarDone: 0
     m_Unlocked: 0
     m_Definition: {fileID: 0}
+    m_StaffDefinitions: []
   m_CurrentKepuasan: 0
   m_CurrentDuration: 0
   m_Ready: 0
   m_LevelOver: 0
   m_UnlockedLevel: 1
   m_Levels:
-  - m_CurrentStarDone: 3
+  - m_CurrentStarDone: 0
     m_Unlocked: 1
     m_Definition: {fileID: 11400000, guid: 215bd6f542a802344be75a83a60c2f14, type: 2}
-  - m_CurrentStarDone: 2
-    m_Unlocked: 1
+    m_StaffDefinitions:
+    - {fileID: 11400000, guid: 1f32bd7d3be2f4b45b85d730157fbbe5, type: 2}
+    - {fileID: 11400000, guid: 1f32bd7d3be2f4b45b85d730157fbbe5, type: 2}
+    - {fileID: 11400000, guid: 1f32bd7d3be2f4b45b85d730157fbbe5, type: 2}
+    - {fileID: 11400000, guid: dc11a8922bf0c6e458fd4673a9ff02db, type: 2}
+  - m_CurrentStarDone: 0
+    m_Unlocked: 0
     m_Definition: {fileID: 11400000, guid: 09f18d81ea2c7a04793079c99e011619, type: 2}
-  - m_CurrentStarDone: 1
-    m_Unlocked: 1
+    m_StaffDefinitions:
+    - {fileID: 11400000, guid: 1f32bd7d3be2f4b45b85d730157fbbe5, type: 2}
+    - {fileID: 11400000, guid: 1f32bd7d3be2f4b45b85d730157fbbe5, type: 2}
+    - {fileID: 11400000, guid: 1f32bd7d3be2f4b45b85d730157fbbe5, type: 2}
+    - {fileID: 11400000, guid: dc11a8922bf0c6e458fd4673a9ff02db, type: 2}
+    - {fileID: 11400000, guid: dc11a8922bf0c6e458fd4673a9ff02db, type: 2}
+    - {fileID: 11400000, guid: bdad5ed0497240d49b82a57c4963731c, type: 2}
+  - m_CurrentStarDone: 0
+    m_Unlocked: 0
     m_Definition: {fileID: 11400000, guid: 8de7074a0ae6fa84491959ed09db4061, type: 2}
+    m_StaffDefinitions:
+    - {fileID: 11400000, guid: 1f32bd7d3be2f4b45b85d730157fbbe5, type: 2}
+    - {fileID: 11400000, guid: 1f32bd7d3be2f4b45b85d730157fbbe5, type: 2}
+    - {fileID: 11400000, guid: dc11a8922bf0c6e458fd4673a9ff02db, type: 2}
+    - {fileID: 11400000, guid: dc11a8922bf0c6e458fd4673a9ff02db, type: 2}
+    - {fileID: 11400000, guid: dc11a8922bf0c6e458fd4673a9ff02db, type: 2}
+    - {fileID: 11400000, guid: bdad5ed0497240d49b82a57c4963731c, type: 2}
+    - {fileID: 11400000, guid: bdad5ed0497240d49b82a57c4963731c, type: 2}
+    - {fileID: 11400000, guid: bdad5ed0497240d49b82a57c4963731c, type: 2}
   m_OnRefresh:
     m_PersistentCalls:
+      m_Calls: []
+  m_OnLevelPlay:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnStarChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnMaxKepuasanChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnKepuasanChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnKepuasanRateChanged:
+    m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Rush.LevelPanel, Assembly-CSharp
-        m_MethodName: Init
+      - m_Target: {fileID: 11400000, guid: 95f520692f73b564cb718c13603eebde, type: 2}
+        m_TargetAssemblyTypeName: Rush.EventTicketDefinition, Assembly-CSharp
+        m_MethodName: Execute
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -78,25 +116,255 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 0
-  m_OnLevelPlay:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnStarChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnKepuasanChanged:
-    m_PersistentCalls:
-      m_Calls: []
+        m_CallState: 2
   m_OnCurrentDurationChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: cdde9d90f2c7a6349bd4e2eba66e944b, type: 2}
+        m_TargetAssemblyTypeName: Rush.EventTicketDefinition, Assembly-CSharp
+        m_MethodName: Execute
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnLevelOverWin:
     m_PersistentCalls:
-      m_Calls: []
-  OnLevelOverLose:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: df95c2b950b7465469fe576233d297a4, type: 2}
+        m_TargetAssemblyTypeName: Rush.EventTicketDefinition, Assembly-CSharp
+        m_MethodName: Execute
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_OnLevelOverLose:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 2076c381210b3164a913fab06a135a00, type: 2}
+        m_TargetAssemblyTypeName: Rush.EventTicketDefinition, Assembly-CSharp
+        m_MethodName: Execute
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnReadyChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &275538197474568800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616041722497922723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 693b6047e4cf5914e89b4624f43a018f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventBusField:
+    m_TargetRegisters:
+    - EventValue: 0
+      EventField:
+        RegisterTarget: {fileID: 11400000, guid: a5b7d2d7669d30148a7ee19517ff1b2a, type: 2}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 5566552760645299931}
+              m_TargetAssemblyTypeName: Rush.GameSingleton, Assembly-CSharp
+              m_MethodName: RestartLevel
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+      EventFieldInt:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldBool:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldFloat:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldVector2:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldIntBool:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldStringVector2:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldObject:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldObjectDouble:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldObjectTripple:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+    - EventValue: 0
+      EventField:
+        RegisterTarget: {fileID: 11400000, guid: d551fcbc64c67dd4e861433e27134518, type: 2}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 5566552760645299931}
+              m_TargetAssemblyTypeName: Rush.GameSingleton, Assembly-CSharp
+              m_MethodName: PlayLevel
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+      EventFieldInt:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldBool:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldFloat:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldVector2:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldIntBool:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldStringVector2:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldObject:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldObjectDouble:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldObjectTripple:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+    - EventValue: 3
+      EventField:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldInt:
+        RegisterTarget: {fileID: 11400000, guid: 141a1f94029b1ff41b608a8479f2e30c, type: 2}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 5566552760645299931}
+              m_TargetAssemblyTypeName: Rush.GameSingleton, Assembly-CSharp
+              m_MethodName: AddUnlockedLevel
+              m_Mode: 0
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+      EventFieldBool:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldFloat:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldVector2:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldIntBool:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldStringVector2:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldObject:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldObjectDouble:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldObjectTripple:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []

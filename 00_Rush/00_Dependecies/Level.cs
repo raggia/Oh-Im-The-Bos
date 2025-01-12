@@ -22,6 +22,12 @@ namespace Rush
         public int CurrentStarDone => m_CurrentStarDone;
         public LevelDefinition Definition => m_Definition;
         public bool Unlocked => m_Unlocked;
+
+        public void Init()
+        {
+            m_CurrentStarDone = GameSingleton.Instance.LoadInt(m_Definition.name + "Star");
+            m_Unlocked = GameSingleton.Instance.LoadBool(m_Definition.name + "Unlocked");
+        }
         public Coroutine LoadLevel()
         {
             return m_Definition.LoadLevel();
@@ -37,6 +43,10 @@ namespace Rush
         public void SetUnlocked(bool set)
         {
             m_Unlocked = set;
+            int i = m_Unlocked? 1 : 0;
+
+
+            GameSingleton.Instance.SaveInt(m_Definition.name + "Unlocked", i);
         }
         public float GetKepuasan()
         {

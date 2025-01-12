@@ -24,7 +24,7 @@ namespace Rush
 
         private IEnumerator StartPanel()
         {
-            yield return new WaitUntil(() => CoroutineSingleton.HasInstance);
+            yield return new WaitUntil(() => CoroutineSingleton.Instance != null);
             ShowInternal();
         }
         protected override void ShowInternal(float overideDelay = 0)

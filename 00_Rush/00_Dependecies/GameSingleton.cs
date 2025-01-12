@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -51,6 +52,10 @@ namespace Rush
         private void Start()
         {
             Refresh();
+            foreach (Level level in Levels)
+            {
+                level.Init();
+            }
         }
 
         private void Update()
@@ -68,6 +73,32 @@ namespace Rush
                 m_OnCurrentDurationChanged?.Invoke(m_CurrentDuration);
                 DetermineLose();
             }
+        }
+
+        private int StarUpdate()
+        {
+            int star = 0;
+            if (GetKepuasanRateInternal() >= 1f)
+            {
+                star = 3;
+                return star;
+            }
+            if (GetKepuasanRateInternal() > 0.66f)
+            {
+                star = 2;
+                return star;
+            }
+            if (GetKepuasanRateInternal() > 0.33f)
+            {
+                star = 1;
+                return star;
+            }
+            if (GetKepuasanRateInternal() < 0.33f)
+            {
+                star = 0;
+                return star;
+            }
+            return star;
         }
 
         private IEnumerator PlayingLevel(LevelDefinition defi)
@@ -136,15 +167,18 @@ namespace Rush
                 m_LevelOver = true;
                 m_OnLevelOverWin?.Invoke(m_PlayedLevel);
                 //SetUnlockedLevel(m_UnlockedLevel + 1);
-                
+                if (m_PlayedLevel.CurrentStarDone > StarUpdate()) return;
+                SetStar(m_PlayedLevel.Definition, StarUpdate());
             }
         }
         private void DetermineLose()
         {
-            if (m_CurrentDuration <= 0)
+            if (m_CurrentDuration <= 0.1f)
             {
                 m_LevelOver = true;
                 m_OnLevelOverLose?.Invoke(m_PlayedLevel);
+                if (m_PlayedLevel.CurrentStarDone > StarUpdate()) return;
+                SetStar(m_PlayedLevel.Definition, StarUpdate());
             }
         }
 
@@ -215,21 +249,24 @@ namespace Rush
             return match;
         }
 
-        public void AddStar(LevelDefinition defi, int add)
+        private void AddStar(LevelDefinition defi, int add)
         {
             m_PlayedLevel = GetLevel(defi);
             m_PlayedLevel.AddStar(add);
             GetLevel(defi).AddStar(add);
             m_OnStarChanged?.Invoke(m_PlayedLevel);
+
+            SaveIntInternal(defi.name + "Star", GetLevel(defi).CurrentStarDone);
         }
 
-        public void SetStar(LevelDefinition defi, int set)
+        private void SetStar(LevelDefinition defi, int set)
         {
             m_PlayedLevel = GetLevel(defi);
             m_PlayedLevel.SetStar(set);
             GetLevel(defi).SetStar(set);
             m_OnStarChanged?.Invoke(m_PlayedLevel);
-            
+
+            SaveIntInternal(defi.name + "Star", GetLevel(defi).CurrentStarDone);
         }
 
         public void PlayLevel(LevelDefinition defi)
@@ -276,6 +313,44 @@ namespace Rush
         public void UnPause()
         {
             Time.timeScale = 1f;
+        }
+
+
+        private void SaveIntInternal(string key, int val)
+        {
+            PlayerPrefs.SetInt(key, val);
+            PlayerPrefs.Save();
+        }
+        public void SaveInt(string key, int val)
+        {
+            SaveIntInternal(key, val);
+        }
+        private int LoadIntInternal(string key)
+        {
+            return PlayerPrefs.GetInt(key);
+        }
+        public int LoadInt(string key)
+        {
+            return LoadIntInternal(key);
+        }
+
+        private bool LoadBoolInternal(string key)
+        {
+            int val = PlayerPrefs.GetInt(key);
+            bool match = false;
+            if (val == 0)
+            {
+                match = false;
+            }
+            if (val == 1)
+            {
+                match = true;
+            }
+            return match;
+        }
+        public bool LoadBool(string key)
+        {
+            return LoadBoolInternal(key);
         }
     }
 }

@@ -1,4 +1,5 @@
 using System.Collections;
+using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -23,8 +24,11 @@ namespace Rush
         {
             m_CanvasView.Show();
             var load = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
+            
             yield return load;
+            load.allowSceneActivation = false;
             yield return new WaitUntil(() => load.isDone);
+            load.allowSceneActivation = true;
             yield return new WaitForSeconds(1f);
             m_CanvasView.Hide();
         }

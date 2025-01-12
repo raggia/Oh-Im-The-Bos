@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6624736959104837402}
   - component: {fileID: 2017081876998123362}
   - component: {fileID: 5246607969213899427}
+  - component: {fileID: 7222359919152145238}
   m_Layer: 5
   m_Name: Canvas Loading
   m_TagString: Untagged
@@ -115,6 +116,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e776d4c17e07d442ac60f8b76a2f350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7222359919152145238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303325211696908593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc0e49bec236b4a4ba7e06e56dd08a66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ViewField:
+    m_Content: {fileID: 2038677046331212252}
+    m_ShowDelay: 0
+    m_HideDelay: 0
+    m_OnShowStart:
+      m_PersistentCalls:
+        m_Calls: []
+    m_OnHideStart:
+      m_PersistentCalls:
+        m_Calls: []
+    m_OnShowDone:
+      m_PersistentCalls:
+        m_Calls: []
+    m_OnHideDone:
+      m_PersistentCalls:
+        m_Calls: []
+    m_IsShowing: 0
+  m_CanvasViewField:
+    m_Canvas: {fileID: 7099926595064075326}
 --- !u!1 &1635602962426290763
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,7 +300,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &950167664833814604
 RectTransform:
   m_ObjectHideFlags: 0
