@@ -25,10 +25,12 @@ namespace Rush
         private UnityEvent<StaffView> m_OnIdleStateEnter = new();
         [SerializeField]
         private UnityEvent<StaffView> m_OnActionStateEnter = new();
+
+        public StaffDefinition Defi => m_Defi;
         protected override void Start()
         {
             base.Start();
-            Init(m_Defi);
+            //Init(m_Defi);
         }
         private void Update()
         {

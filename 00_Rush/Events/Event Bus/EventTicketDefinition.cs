@@ -13,10 +13,11 @@ namespace Rush
         None,
         Bool,
         Float,
+        Int,
         Vector2,
         IntBool,
         StringVector2,
-        Level,
+        
         /*String,
         Int,
         
@@ -37,9 +38,9 @@ namespace Rush
     public class EventPassangerSOField
     {
 
-        [ShowIf(nameof(ExecuteValue), ValueType.Level)]
+        [ShowIf(nameof(ExecuteValue), ValueType.Int)]
         [AllowNesting]
-        public UnityEvent<Level> LevelValue;
+        public UnityEvent<int> IntValue;
 
         [Header("Executed when placed on Followers")]
         [Space]
@@ -133,10 +134,10 @@ namespace Rush
             m_GameEventField.ObjectTripleValue?.Invoke(value1, value1, value2);
 
         }
-        public void Execute(Level value)
+        public void Execute(int value)
         {
-            ActionHandler<Level>.ExecuteAction(name + GetInstanceID(), value);
-            m_GameEventField.LevelValue?.Invoke(value);
+            ActionHandler<int>.ExecuteAction(name + GetInstanceID(), value);
+            m_GameEventField.IntValue?.Invoke(value);
 
         }
         public void Execute(bool value)

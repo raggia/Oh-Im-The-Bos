@@ -4686,7 +4686,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
       propertyPath: m_UnlockedLevel
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
       propertyPath: m_Levels.Array.data[1].m_Unlocked
@@ -4694,6 +4694,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
       propertyPath: m_Levels.Array.data[2].m_Unlocked
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
+      propertyPath: m_Levels.Array.data[0].m_CurrentStarDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
+      propertyPath: m_Levels.Array.data[1].m_CurrentStarDone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
+      propertyPath: m_Levels.Array.data[2].m_CurrentStarDone
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
@@ -4706,7 +4718,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
       propertyPath: m_Levels.Array.data[0].m_StaffDefinitions.Array.size
-      value: 0
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
+      propertyPath: m_Levels.Array.data[1].m_StaffDefinitions.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
+      propertyPath: m_Levels.Array.data[2].m_StaffDefinitions.Array.size
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
       propertyPath: m_OnLevelOverWin.m_PersistentCalls.m_Calls.Array.size
@@ -4716,6 +4736,78 @@ PrefabInstance:
       propertyPath: m_OnLevelOverLose.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
+      propertyPath: 'm_Levels.Array.data[0].m_StaffDefinitions.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 1f32bd7d3be2f4b45b85d730157fbbe5, type: 2}
+    - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
+      propertyPath: 'm_Levels.Array.data[0].m_StaffDefinitions.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 1f32bd7d3be2f4b45b85d730157fbbe5, type: 2}
+    - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
+      propertyPath: 'm_Levels.Array.data[0].m_StaffDefinitions.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 1f32bd7d3be2f4b45b85d730157fbbe5, type: 2}
+    - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
+      propertyPath: 'm_Levels.Array.data[0].m_StaffDefinitions.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: dc11a8922bf0c6e458fd4673a9ff02db, type: 2}
+    - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
+      propertyPath: 'm_Levels.Array.data[1].m_StaffDefinitions.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 1f32bd7d3be2f4b45b85d730157fbbe5, type: 2}
+    - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
+      propertyPath: 'm_Levels.Array.data[1].m_StaffDefinitions.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 1f32bd7d3be2f4b45b85d730157fbbe5, type: 2}
+    - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
+      propertyPath: 'm_Levels.Array.data[1].m_StaffDefinitions.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 1f32bd7d3be2f4b45b85d730157fbbe5, type: 2}
+    - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
+      propertyPath: 'm_Levels.Array.data[1].m_StaffDefinitions.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: dc11a8922bf0c6e458fd4673a9ff02db, type: 2}
+    - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
+      propertyPath: 'm_Levels.Array.data[1].m_StaffDefinitions.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: dc11a8922bf0c6e458fd4673a9ff02db, type: 2}
+    - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
+      propertyPath: 'm_Levels.Array.data[1].m_StaffDefinitions.Array.data[5]'
+      value: 
+      objectReference: {fileID: 11400000, guid: bdad5ed0497240d49b82a57c4963731c, type: 2}
+    - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
+      propertyPath: 'm_Levels.Array.data[2].m_StaffDefinitions.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 1f32bd7d3be2f4b45b85d730157fbbe5, type: 2}
+    - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
+      propertyPath: 'm_Levels.Array.data[2].m_StaffDefinitions.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 1f32bd7d3be2f4b45b85d730157fbbe5, type: 2}
+    - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
+      propertyPath: 'm_Levels.Array.data[2].m_StaffDefinitions.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: dc11a8922bf0c6e458fd4673a9ff02db, type: 2}
+    - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
+      propertyPath: 'm_Levels.Array.data[2].m_StaffDefinitions.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: dc11a8922bf0c6e458fd4673a9ff02db, type: 2}
+    - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
+      propertyPath: 'm_Levels.Array.data[2].m_StaffDefinitions.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: dc11a8922bf0c6e458fd4673a9ff02db, type: 2}
+    - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
+      propertyPath: 'm_Levels.Array.data[2].m_StaffDefinitions.Array.data[5]'
+      value: 
+      objectReference: {fileID: 11400000, guid: bdad5ed0497240d49b82a57c4963731c, type: 2}
+    - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
+      propertyPath: 'm_Levels.Array.data[2].m_StaffDefinitions.Array.data[6]'
+      value: 
+      objectReference: {fileID: 11400000, guid: bdad5ed0497240d49b82a57c4963731c, type: 2}
+    - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
+      propertyPath: 'm_Levels.Array.data[2].m_StaffDefinitions.Array.data[7]'
+      value: 
+      objectReference: {fileID: 11400000, guid: bdad5ed0497240d49b82a57c4963731c, type: 2}
     - target: {fileID: 5566552760645299931, guid: e79486cdf1602a048a7921d8922d4a10, type: 3}
       propertyPath: m_OnKepuasanRateChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -4896,6 +4988,137 @@ MonoBehaviour:
               m_TargetAssemblyTypeName: Rush.GameSingleton, Assembly-CSharp
               m_MethodName: RestartLevel
               m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+      EventFieldInt:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldBool:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldFloat:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldVector2:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldIntBool:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldStringVector2:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldObject:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldObjectDouble:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldObjectTripple:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+    - EventValue: 0
+      EventField:
+        RegisterTarget: {fileID: 11400000, guid: d551fcbc64c67dd4e861433e27134518, type: 2}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 6417234536862100062}
+              m_TargetAssemblyTypeName: Rush.GameSingleton, Assembly-CSharp
+              m_MethodName: PlayLevel
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+      EventFieldInt:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldBool:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldFloat:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldVector2:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldIntBool:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldStringVector2:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldObject:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldObjectDouble:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldObjectTripple:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+    - EventValue: 3
+      EventField:
+        RegisterTarget: {fileID: 0}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls: []
+      EventFieldInt:
+        RegisterTarget: {fileID: 11400000, guid: 141a1f94029b1ff41b608a8479f2e30c, type: 2}
+        RegisterEvent:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 6417234536862100062}
+              m_TargetAssemblyTypeName: Rush.GameSingleton, Assembly-CSharp
+              m_MethodName: AddUnlockedLevel
+              m_Mode: 0
               m_Arguments:
                 m_ObjectArgument: {fileID: 0}
                 m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

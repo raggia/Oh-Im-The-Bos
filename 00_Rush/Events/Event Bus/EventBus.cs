@@ -29,20 +29,20 @@ namespace Rush
         }
     }
     [Serializable]
-    public class LevelField
+    public class IntField
     {
         public EventTicketDefinition RegisterTarget;
-        public UnityEvent<Level> RegisterEvent = new UnityEvent<Level>();
-        public void Register(UnityAction<Level> action)
+        public UnityEvent<int> RegisterEvent = new UnityEvent<int>();
+        public void Register(UnityAction<int> action)
         {
             if (RegisterTarget == null) return;
             RegisterTarget.Register(action);
         }
-        public void Listen(Level value)
+        public void Listen(int value)
         {
             RegisterEvent?.Invoke(value);
         }
-        public void UnRegister(UnityAction<Level> action)
+        public void UnRegister(UnityAction<int> action)
         {
             if (RegisterTarget == null) return;
             RegisterTarget.UnRegister(action);
@@ -217,7 +217,9 @@ namespace Rush
         [ShowIf(nameof(EventValue), ValueType.None)]
         [AllowNesting]
         public VoidField EventField;
-
+        [ShowIf(nameof(EventValue), ValueType.Int)]
+        [AllowNesting]
+        public IntField EventFieldInt;
         [ShowIf(nameof(EventValue), ValueType.Bool)]
         [AllowNesting]
         public BoolField EventFieldBool;
@@ -256,6 +258,9 @@ namespace Rush
                 case ValueType.None:
                     Register(Listen);
                     break;
+                case ValueType.Int:
+                    RegisterInt(ListenInt);
+                    break;
                 case ValueType.Bool: 
                     RegisterBool(ListenBool);
                     break;
@@ -289,8 +294,11 @@ namespace Rush
                 case ValueType.None:
                     UnRegister(Listen);
                     break;
+                case ValueType.Int:
+                    UnRegisterInt(ListenInt);
+                    break;
                 case ValueType.Bool:
-                    UnRegisterIntBool(ListenBool);
+                    UnRegisterBool(ListenBool);
                     break;
                 case ValueType.Float:
                     UnRegisterFloat(ListenFloat);
@@ -319,6 +327,10 @@ namespace Rush
         private void Register(UnityAction action)
         {
             EventField.Register(action);
+        }
+        private void RegisterInt(UnityAction<int> action)
+        {
+            EventFieldInt.Register(action);
         }
         private void RegisterBool(UnityAction<bool> action)
         {
@@ -356,6 +368,10 @@ namespace Rush
         {
             EventField.Listen();
         }
+        private void ListenInt(int value)
+        {
+            EventFieldInt.Listen(value);
+        }
         private void ListenBool(bool value)
         {
             EventFieldBool.Listen(value);
@@ -392,7 +408,11 @@ namespace Rush
         {
             EventField.UnRegister(action);
         }
-        private void UnRegisterIntBool(UnityAction<bool> action)
+        private void UnRegisterInt(UnityAction<int> action)
+        {
+            EventFieldInt.UnRegister(action);
+        }
+        private void UnRegisterBool(UnityAction<bool> action)
         {
             EventFieldBool.UnRegister(action);
         }

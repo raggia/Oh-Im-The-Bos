@@ -135,6 +135,8 @@ namespace Rush
             {
                 m_LevelOver = true;
                 m_OnLevelOverWin?.Invoke(m_PlayedLevel);
+                //SetUnlockedLevel(m_UnlockedLevel + 1);
+                
             }
         }
         private void DetermineLose()
@@ -157,11 +159,21 @@ namespace Rush
         public void SetUnlockedLevel(int set)
         {
             m_UnlockedLevel = set;
+            m_UnlockedLevel = Mathf.Clamp(m_UnlockedLevel, 1, m_Levels.Count + 1);
+            if (m_UnlockedLevel < m_Levels.Count)
+            {
+                GetLevel(m_Levels[m_UnlockedLevel].Definition).SetUnlocked(true);
+            }
             RefreshInternal();
         }
         public void AddUnlockedLevel(int add)
         {
             m_UnlockedLevel += add;
+            m_UnlockedLevel = Mathf.Clamp(m_UnlockedLevel, 1, m_Levels.Count + 1);
+            if (m_UnlockedLevel < m_Levels.Count)
+            {
+                GetLevel(m_Levels[m_UnlockedLevel].Definition).SetUnlocked(true);
+            }
             RefreshInternal();
         }
         public void AddCurrentKepuasan(float add)
@@ -221,6 +233,17 @@ namespace Rush
 
         public void PlayLevel(LevelDefinition defi)
         {
+            CoroutineSingleton.Instance.BeginCoroutine($"{GetInstanceID()}/{nameof(PlayingLevel)}", PlayingLevel(defi));
+        }
+        public void PlayLevel()
+        {
+            int index = m_UnlockedLevel - 1;
+            if (m_UnlockedLevel >= 4)
+            {
+                SceneLoaderSingleton.Instance.LoadScene("Main Menu");
+                return;
+            }
+            LevelDefinition defi = m_Levels[index].Definition;
             CoroutineSingleton.Instance.BeginCoroutine($"{GetInstanceID()}/{nameof(PlayingLevel)}", PlayingLevel(defi));
         }
 
